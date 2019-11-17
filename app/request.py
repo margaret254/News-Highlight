@@ -10,7 +10,7 @@ News = news.News
 api_key = app.config['NEWS_API_KEY']
 
 # Getting the movie base url
-NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&apiKey={}'
+NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
 
 def get_news(category):
     '''
@@ -30,20 +30,8 @@ def get_news(category):
 
 
     return news_results
-    # get_news_url = base_url.format(category,api_key)
-
-    # with_urllib.request.urlopen(get_news_url) as url:
-    #     get_news_data = url.read()
-    #     get_news_response = json.loads(get_news_data)
-
-    #     news_results = None
-
-    #     if get_news_response['results']:
-    #         news_results_list = get_news_response['results']
-    #         news_results = process_results(news_results_list)
-
-    # return news_results
-
+    
+    
 def process_results(news_list):
     '''
     function that processes the news result
