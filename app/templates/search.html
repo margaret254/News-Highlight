@@ -2,6 +2,7 @@
 {% import 'macros.html' as macro%}
 
 {% block content %}
+<section class="bg-secondary">
     <div class="container">
 
         <div class="row">
@@ -9,10 +10,12 @@
             <h3> Found {{ movies| count }} matches </h3>
             <hr>
             <ul>
-                {{ macro.displayMovieList(movies)}}
+                {{ macro.Article(movies)}}
             </ul>
 
         </div>
 
     </div>
+</section>
+
 {% endblock %}

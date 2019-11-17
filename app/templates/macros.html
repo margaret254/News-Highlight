@@ -1,7 +1,22 @@
-{% macro displayNewsList(news_list) %}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
 
-    {% for news in news_list %}
-        <li>{{ news.title}}</li>
-    {% endfor %}
+<!-- styles block -->
 
-{% endmacro %}
+{% block styles%}
+ {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- Content block -->
+{% block content %}
+<section class="bg-secondary">
+    <div class="container" id="content">
+            
+        <div class="row">
+            
+            {{macro.displayNewsList(news_source)}}
+        </div>
+    </div>
+</section>
+
+{% endblock%}
