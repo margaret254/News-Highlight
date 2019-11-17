@@ -1,3 +1,6 @@
+
+{% extends 'base.html%}
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,25 @@
     <title> Welcome to Our News Online Application</title>
 </head>
 <body>
-    
+
+    <!-- Content block -->
+    {% block content %}
+    <!-- General News -->
+    <h3> General News</h3>
+    <ul>
+        {{ macro.displayNewsList(general)}}
+    </ul>
+    <!-- Entertainment  -->
+    <h3> Entertainment News  </h3>
+    <ul>
+        {{ macro.displayNewsList(entertainment)}}
+    </ul>
+    <!-- Business -->
+    <h3>Business News</h3>
+    <ul>
+        {{ macro.displayNewsList(business)}}
+    </ul>
+
+    {% endblock %}
 </body>
 </html>
