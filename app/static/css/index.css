@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
+
+
+ h3{
+     text-align: center;
+     color: black;
+     font-family: 'Carter One', cursive;
+ }
+ a, a:hover{
+     text-decoration: rgb(red, green, blue);
+ }
+ .card{
+    box-shadow:5px 5px black;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+}
