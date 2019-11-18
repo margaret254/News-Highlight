@@ -19,3 +19,14 @@ p{
     font-size: 15px;
 }
 
+.navbar{
+    text-align: center;
+    margin:30px;
+    font-family: 'Calistoga', cursive;
+    font-size: 40px;
+}
+
+.container-fluid{
+   background-color: #4B4565;
+}
+
