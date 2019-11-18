@@ -28,11 +28,16 @@
      margin:5px;
  }
 
- .navbar{
+ .navbar h1{
      text-align: center;
      margin:30px;
      font-family: 'Calistoga', cursive;
      font-size: 40px;
+ }
+ .navbar p{
+    font-family: 'Calistoga', cursive;
+    font-size: 30px;
+    text-align: center;
  }
 
  .container-fluid{
