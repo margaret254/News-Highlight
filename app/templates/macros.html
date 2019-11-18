@@ -1,22 +1,42 @@
-{% extends 'base.html' %}
-{% import 'macros.html' as macro%}
+{% macro displayNewsList(news_results) %}
 
-<!-- styles block -->
+{% for result in news_results %}
 
-{% block styles%}
- {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock %}
-<!-- Content block -->
-{% block content %}
-<section class="bg-secondary">
-    <div class="container" id="content">
-            
-        <div class="row">
-            
-            {{macro.displayNewsList(news_source)}}
+<div class="col-md-12">
+        
+    <div class="card news">
+        <div class="card-header text-center">
+             <h3>{{result.name }}</h3>
+        </div>
+        <div class="card-body">
+            <p class="description">{{result.description|truncate(150)}}</p>
+        </div>
+        <div class="read">
+            <a id="read" class="header section-link bg-success" href="/news/{{result.id}}"> Read more</a>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+{% endfor %}
+{% endmacro %}
+
+{%  macro Article(article_result) %}
+
+    {% for arts in article_result %}
+    <div class="col-md-12 mt-10">
+        
+        <div class="card article_result">
+            <img class="card-img-top " src="{{arts.urlToImage}}"  alt="{{arts.name}}">
+            <div class="card-body">
+            <h4 class="card-title"> Written By: {{arts.author}}</h4>
+            <p class="card-text">{{arts.description |truncate(200)}}</p>
+            <div class="card-header">Published on: {{arts.publishedAt}}</div>
+            <a href="{{arts.url}}"  target="_blank" class="btn btn-success stretched-link">Read more....</a>
+            </div>
         </div>
     </div>
-</section>
-
-{% endblock%}
+    {% endfor %}
+{% endmacro %}

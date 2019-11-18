@@ -1,18 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata|Signika&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata|Calistoga|Signika&display=swap');
 
 
  h3{
      text-align: center;
-     color: black;
-     font-family: 'Carter One', cursive;
+     color: rgb(10, 4, 4);
+     font-family: 'Alata', sans-serif;
  }
- a, a:hover{
-     text-decoration: rgb(red, green, blue);
+ 
+ 
+ 
+ #content{
+     background-color:#93C1AD;
  }
- .card{
-    box-shadow:5px 5px black;
+
+ .news{
+    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+    font-size: 20px;
+    margin:10px;
+    font-family: 'Signika', sans-serif;
+    height: 150px;
     
-}
-.card:hover{
-    transform: scale(1.1);
-}
+ }
+
+ #read{
+     margin:5px;
+ }
+
+ .navbar{
+     text-align: center;
+     margin:30px;
+     font-family: 'Calistoga', cursive;
+     font-size: 40px;
+ }
+
+ .container-fluid{
+    background-color: #4B4565;
+ }

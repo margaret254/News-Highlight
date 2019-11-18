@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata|Signika&display=swap');
+
+
 h4{
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Alata', sans-serif;
 }
+
+*{
+    background-color: #93C1AD;;
+}
+
+.article_result{
+    margin:20px;
+}
+
+p{
+    font-family: 'Signika', sans-serif;
+    font-size: 15px;
+}
+

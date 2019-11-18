@@ -5,7 +5,7 @@ import requests
 #Getting api key
 api_key = None
 
-#getting the movie base url
+#getting the news base url
 base_url = None
 
 def configure_request(app):
@@ -48,7 +48,7 @@ def process_results(news_results_list):
             news_results.append(news_obj)
     return news_results
 
-#get movie
+#get articles
 def get_articles(id):
     get_articles_url = article_base_url.format(id,api_key)
     
@@ -76,14 +76,13 @@ def process_article(article_list):
     return articles_results
 
 def search_news(name):
-    #search_movie_url = 'https://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(api_key,movie_name)
-    search_movie_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
-    search_movie_response = requests.get(search_movie_url).json()
+    search_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(name,api_key)
+    search_news_response = requests.get(search_movie_url).json()
 
-    if search_movie_response['articles']:
-        search_movie_list = search_movie_response['articles']
-        search_movie_results = process_article(search_movie_list) 
+    if search_news_response['articles']:
+        search_news_list = search_news_response['articles']
+        search_news_results = process_article(search_news_list) 
 
-    return search_movie_results   
+    return search_news_results   
 
     
